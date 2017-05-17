@@ -1,17 +1,137 @@
 body {
+  background-color: rgb(242,245,247);
+  font-family: "LatoRegular";
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-x:  hidden;
+  opacity: 1;
+}
 
-  background-color: green;
-  margin-top: 10px;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding: 25px;
+.wrapper-first {
+	margin:0 30px 0 30px;
+}
+
+header {
+	background-image: url(../images/top-bgr.jpg);
+	background-repeat: repeat-x;
+	background-position: top center;
+	min-height:880px;
+	position: relative;
+}
+
+header h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 250px;
+	font-size: 50px;
+	font-family: "LatoBold";
+	text-shadow: 0 1px rgba(122,0,0,0.55);
+}
+
+header p {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	text-shadow: 0 1px rgba(122,0,0,0.55);
+}
+
+header .btn {
+	margin: auto;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+}
+
+.top_line {
+	font-family: "LatoRegular";
+	min-height: 80px;
+	-webkit-box-shadow: rgba(255,255,255,.3) 0 0 0 1px;
+	box-shadow: rgba(255,255,255,.4) 0 0 0 1px;
+	/*position: absolute;
+	top: 0;*/
+	width: 100%;
+	background-color: rgba(0,0,0,.8);
+	padding: 10px 0 10px 0
+}
+
+.top_addres {
+	padding-left: 60px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	line-height: 28px;
+}
+
+.top_line strong {
+	display: block;
+	color: rgb(222,105,88);
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.top_line a {
+	color: #fff;
+	font-size: 21px;
+	border-bottom: #fff dashed 1px;
+	-webkit-transition: all .25s; 
+	-o-transition: all .25s; 
+	transition: all .25s; 
+}
+
+.top_line  a:hover {
+	border-bottom: transparent 1px dashed;
+}
+
+.top_line .logo_site{
+	border-bottom: none;
+	position: absolute;
+	margin-top: 10px;
+}
+
+.top_line .logo_site:hover{
+	border-bottom: none;
+}
+
+.logo_wrap {
+	position: relative;
+}
+
+.btn_in_main {
+	padding-top:8px;
+	display: block;
+	text-align:center;
+}
+
+.top_menu ul {
+	margin:0;
+	padding:0;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-family: "LatoBold";
+	
 }
 
 
+.top_menu a {
+	display: block;
+	font-size: 18px;
+	padding: 0 26px;
+	line-height:80px;
 
-p {
-  border: mediumturquoise 10px solid;
-  color: #110099;
-  padding: 10px;
+}
 
+.top_menu li {
+	float:left;
+}
+
+.top_menu li:active a, .top_menu li:hover a {
+	background-color: #050505;
+}
+
+.col-md-3 img {
+	width:270px;
+	height:185px;	
 }

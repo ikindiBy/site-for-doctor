@@ -1,0 +1,76 @@
+body {
+	min-width: 320px;
+	position: relative;
+	font-family: "OpenSansRegular", sans-serif;
+	overflow-x: hidden;
+}
+
+.main_head .lead{
+	color:#fff;
+	font-family: "OpenSansBold", sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+
+.navbar-brand {
+	padding:0;
+	position: relative;
+	top: 5px;
+	z-index: 2;
+}
+
+.phone_top {
+	top: 12px;
+	position: relative;
+	text-align: center;
+}
+
+.main_head > .navbar {
+	margin-bottom: 0;
+	z-index: 20;
+}
+
+
+.carousel-inner > .item > img {
+	position: relative;
+	
+}
+
+.carousel-inner .overlay {
+	position:absolute;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0,51,51,.4);
+}
+
+.carousel-inner .h1 {
+	font-family: "OpenSansBold", sans-serif;
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+.carousel-control {
+	z-index: 10;
+}
+
+.main_head ul.navbar-nav {
+	position: relative;
+	z-index: 2;
+}
+
+.slide_img {
+	position:absolute;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+}

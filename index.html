@@ -1,44 +1,511 @@
 <!DOCTYPE html>
-  <html>
- <head>
-  <meta charset="utf-8">
-  <title>Worker task</title>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 
-    <link href="css/style.css" rel="stylesheet">  <!-- этот css кастомизирует - поэтому его лучше после либов подключать -->
-   
+<head>
 
- </head>
- <body>
+	<meta charset="utf-8">
 
-    <h1> Simple text</h1>
-	<p class="item-two">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
-	<a href="#"> Link</a>
+	<title>Doctor's site</title>
+	<meta name="description" content="">
 
-	<section class="item-one">
-		<div class="conteiner">
-			<ul>
-				<li><a href="#">item-1</a></li>
-				<li><a href="#">item-2</a></li>
-				<li><a href="#">item-3</a></li>
-				<li><a href="#">item-4</a></li>
-				<li><a href="#">item-5</a></li>
+	<!-- Bootstrap v3.3.7  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- bootstrap_skin  -->
+	<link rel="stylesheet" href="css/bootstrap_skin.css">
 
-			</ul>
+		<!-- Load CSS -->
+	<link rel="stylesheet" href="css/_header.css">
+	<link rel="stylesheet" href="css/_main.css">
+	<link rel="stylesheet" href="css/_fonts.css">
+	<link rel="stylesheet" href="css/_media.css">
+
+	<!-- Fonts Loader from _fonts.css (HTML5 LocalStorage) -->
+	<script>!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="_fonts.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+	<header class="main_head">
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="img/logo_s.png" alt="Brand"></img></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Main</a></li>
+						<li><a href="#">For pacients</a></li>
+						<li><a href="#">For colegues</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">About theme 1</a></li>
+								<li><a href="#">About theme 2</a></li>
+								<li><a href="#">About theme 3</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Other theme 1</a></li>
+								<li><a href="#">Spec theme 1</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+					<div class="nav navbar-nav navbar-right">
+						<div class="lead phone_top">8029-999-99-99</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class="s_slaider">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<div class="overlay"></div>
+					<div class="slide_img" style="background-image:url(img/slide_1.jpg)"></div>
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="h1">Security and beauty.</div>
+							<small> Small benease of headline sdfsdfsdfsd fsfsdfsd fsfsdf</small>
+							<p>Note: If you're viewing this page via a  URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="overlay"></div>
+					<div class="slide_img" style="background-image:url(img/slide_2.jpg)"></div>
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="h1">Inner world.</div>
+							<small> Small benease of headline</small>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</section>
+	<section class="s_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 ">
+					<div class="content">
+						<h1>Most popular themes</h1>
+						<div class="tills"> 
+							<div class="row"> 
+								<div class="col-sm-6 till_item">
+									<div class="tt">
+										<a class="trow" href="#" >
+											<img src="img/f1.jpg" alt="Alt">
+											<span class="till_content">
+												<span class="tcell"> 
+													<span class="till_txt">Useful food for your eyes</span>
+												</span>
+											</span>
+										</a>
+									</div>			
+								</div>
+								<div class="col-sm-6 till_item">
+									<div class="tt">
+										<a href="#" class="trow">
+											<img src="img/f2.jpg" alt="Alt">
+											<span class="till_content">
+												<span class="tcell"> 
+													<span class="till_txt">Useful food for your eyes</span>
+												</span>
+											</span>
+										</a>
+									</div>			
+								</div>
+								<div class="col-sm-6 till_item">
+									<div class="tt">
+										<a href="#" class="trow">
+											<img src="img/f3.jpg" alt="Alt">
+											<span class="till_content">
+												<span class="tcell"> 
+													<span class="till_txt">Useful food for your eyes</span>
+												</span>
+											</span>
+										</a>
+									</div>			
+								</div>
+								<div class="col-sm-6 till_item">
+									<div class="tt">
+										<a href="#" class="trow">
+											<img src="img/f4.jpg" alt="Alt">
+											<span class="till_content">
+												<span class="tcell"> 
+													<span class="till_txt">Vitamines: benefits and minuses</span>
+												</span>
+											</span>
+										</a>
+									</div>			
+								</div>
+							</div>
+						</div>
+						<hr>
+						<article>
+							<div class="row">
+								<div class="col-md-5 col-md-push-7">
+									<img src="img/main_page.jpg" alt="">
+								</div>
+								<div class="col-md-7 col-md-pull-5">
+									<p class="lead"> 
+									Ophthalmology  is the branch of <a href="#">medicine</a> that deals with the anatomy, physiology and diseases of the eyeball.</p>
+									<p>An ophthalmologist is a specialist in medical and surgical eye problems. Since ophthalmologists perform operations on eyes, they are both surgical and medical specialists. A multitude of diseases and conditions can be diagnosed from the eye. </p> 
+									<p>The Greek roots of the word ophthalmology are ὀφθαλμό (ophthalmos, "eye") and -λoγία (-logia, "study, discourse"),[4][5] i.e., "the study of eyes". The discipline applies to all animal eyes, whether human or not, since the practice and procedures are quite similar with respect to disease processes, while differences in anatomy or disease prevalence, whether subtle or substantial, may differentiate the two.</p>
+								</div>
+							</div>
+						</article>
+						<hr>
+						<div class="widget_news">
+							<h4> News in medicine </h4>
+							<div class="row">
+								<ul>
 
-	<p class="item-two">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
-  </body>
+									<li class="col-md-4 wn_item"><div class="panel panel-default">
+										<div class="panel-body">
+											<p>Initial postoperative follow-up in patients with abducens palsy undergoing IRT shows a significant improvement in ocular alignment and torticollis. In patients with preoperative hypertropia.
+											<a href="#" class="more"> Read more...</a>
+										</div>
+										</div> 
+									</li>
+									<li class="col-md-4 wn_item"><div class="panel panel-default">
+										<div class="panel-body">
+											<p>Macular edema is the most frequent condition associated with vision loss in uveitis. A randomized controlled trial has compared the systemic interferon (IFN)-a2a and corticosteroid treatment at 4 months. 
+											</p>
+											<a href="#" class="more"> Read more...</a>
+										</div>
+										</div> 
+									</li>
+									<li class="col-md-4 wn_item"><div class="panel panel-default">
+										<div class="panel-body">
+											<p> The difference between CATCRP and CASimK, as calculated by Pentacam HR, is greater in candidates for toric IOL implantation than in the general population.
+											</p>
+											<a href="#" class="more"> Read more...</a>
+										</div>
+										</div> 
+									</li>
+
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 ">
+						<aside class="left_side">
+							<div class="box box_search">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="Searcing on site">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<form class="box box_back">
+								<div class="panel panel-default">
+									<div class="panel-heading clearfix"> 
+										<h4>Your submissions</h4>
+										<button class="btn btn-success">Send</button>
+									</div>
+									<div class="panel-body">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+												<input type="text" class="form-control" placeholder="Your name" required>
+											</div>
+											<div class="input-group">
+												<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+												<input type="text" class="form-control" placeholder="Your phone" required>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+					<!-- ACCORDEON MENU  -->
+							<div class="box box_menu">
+								<div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+													Prevention
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+											<div class="list-group">
+												<a href="#" class="list-group-item active">
+													<span>Eye Hygiene</span>
+												</a>
+												<a href="#" class="list-group-item">
+													<span>Sunglasses</span>
+												</a>
+												<a href="#" class="list-group-item">
+													<span>Exercises</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													 Diseases 
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+											<div class="list-group">
+												<a href="#" class="list-group-item active">
+													<span>Myopia </span>
+												</a>
+												<a href="#" class="list-group-item">
+													<span>Cataract </span>
+												</a>
+												<a href="#" class="list-group-item">
+													<span>Glaucoma</span>
+												</a>
+												<a href="#" class="list-group-item">
+													<span>Hyperopia</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													Useful links
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+											<div class="panel-body">
+												Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Фrobably haven't heard of them accusamus labore sustainable VHS.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bax box_articles"> 
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<h4>Interesting articles</h4>
+										<div id="asideCarousel" class="carousel slide carousel-fade aside_carousel" data-ride="carousel">
+											<div class="carousel-inner" role="listbox">
+												<div class="item active">
+													<div class="aside_carus_cont">
+														<h4 class="lead">"Ophtalmologi nowadays and problems  in other blablablabla"</h4>
+														<div class="article_cont">
+															<p>We facilisis in, egestas eget quam. Donec id elit non mi porta gravida at ege</p>
+															<p>Rers in, egestasgravi eget quam. Donecgravi id elit n gravi on mi porta gravida at ege</p>
+														</div>
+														<a href="#" class="more">Read more...</a>
+													</div>
+												</div>
+												<div class="item">
+													<div class="aside_carus_cont">
+														<h4 class="lead">"Duo nowadays"</h4>
+														<div class="article_cont">
+															<p>We facilisis in, egestas eget quam. Donec id elit non mi porta gravida at ege</p>
+															<p>Rers in, egestasgravi eget quam. Donecgravi id elit n gravi on mi porta gravida at ege</p>
+														</div>
+														<a href="#" class="more">Read more...</a>
+													</div>
+												</div>
+												<div class="item">
+													<div class="aside_carus_cont">
+														<h4 class="lead">"Qerty nowadays"</h4>
+														<div class="article_cont">
+															<p>We facilisis in, egestas eget quam. Donec id elit non mi porta gravida at ege</p>
+															<p>Rers in, egestasgravi eget quam. Donecgravi id elit n gravi on mi porta gravida at ege</p>
+														</div>
+														<a href="#" class="more">Read more...</a>
+													</div>
+												</div>
+												<div class="item">
+													<div class="aside_carus_cont">
+														<h4 class="lead">"Wertu nowadays"</h4>
+														<div class="article_cont">
+															<p>We facilisis in, egestas eget quam. Donec id elit non mi porta gravida at ege</p>
+															<p>Rers in, egestasgravi eget quam. Donecgravi id elit n gravi on mi porta gravida at ege</p>
+														</div>
+														<a href="#" class="more">Read more...</a>
+													</div>
+												</div>
+												<div class="item">
+													<div class="aside_carus_cont">
+														<h4 class="lead">"Article about owadays"</h4>
+														<div class="article_cont">
+															<p>We facilisis in, egestas eget quam. Donec id elit non mi porta gravida at ege</p>
+															<p>Rers in, egestasgravi eget quam. Donecgravi id elit n gravi on mi porta gravida at ege</p>
+														</div>
+														<a href="#" class="more">Read more...</a>
+													</div>
+												</div>
+											</div>
+											<!-- Indicators -->
+											<ol class="carousel-indicators">
+												<li data-target="#asideCarousel" data-slide-to="0" class="active"></li>
+												<li data-target="#asideCarousel" data-slide-to="1" class=""></li>
+												<li data-target="#asideCarousel" data-slide-to="2" class=""></li>
+												<li data-target="#asideCarousel" data-slide-to="3" class=""></li>
+												<li data-target="#asideCarousel" data-slide-to="4" class=""></li>
+											</ol>
+											<div class="car_controls"> 
+												<a class="left carousel-control" href="#asideCarousel" role="button" data-slide="prev">
+													<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="right carousel-control" href="#asideCarousel" role="button" data-slide="next">
+													<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box">
+								<div class="well">
+									<h4> Any information  </h4>
+									Diplom or license <br>N 9999999/888
+
+								</div>
+							</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="main_footer">
+		<div class="container"> 
+			<div class="row"> 
+				<div class="col-md-2 col-sm-6 col-xs-6"> 
+					<div class="logo_wrap">
+						<img src="img/logo_s.png" alt="Logo">
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6"> 
+					<strong class="footer_sentence"> Site for all <br> by professional</strong>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="footer_social">
+					Social networks group
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-6 col-xs-6"> 
+					<a href="#" class="devel">
+					Developed by <span> iki <span><br>
+					<a href="" class="callback" data-toggle="modal" data-target="#myModal">Conect with phone</a>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<div class="madals"> 
+		<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+		  <div class="modal-dialog" role="document">
+		    
+		    <form class="modal-content">
+		      	<div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Call my</h4>
+		      	</div>
+		      	<div class="modal-body">
+			        <div class="form-group">
+						<label class="control-label" for="inputDefault">Your name:</label>
+						<input type="text" class="form-control" id="inputDefault">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="inputDefault">And your phone:</label>
+						<input type="text" class="form-control" id="inputDefault">
+					</div>
+		     	</div>
+		      	<div class="modal-footer">
+		        <button type="submit" class="btn btn-success">Send</button>
+		      </div>
+		    </form><!-- /.modal-content -->
+
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Load CSS -->
+	<script>
+		function loadCSS(hf) {
+			var ms=document.createElement("link");ms.rel="stylesheet";
+			ms.href=hf;document.getElementsByTagName("head")[0].appendChild(ms);
+		}
+		loadCSS("libs/animate/animate.css"); //Load Libs CSS: Animate CSS
+		loadCSS("_header.css");              //Header Styles (compress & paste to header after release)
+		loadCSS("_main.css");                //User Styles: Main
+		loadCSS("_media.css");               //User Styles: Media
+	</script>
+
+	<!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
+	<script>var ms=document.createElement("link");ms.rel="stylesheet";
+		// ms.href="compiled.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	</script>
+
+	<!-- Load Scripts -->
+	<script>var scr = {"scripts":[
+		{"src" : "libs/modernizr/modernizr.js", "async" : false},
+		{"src" : "libs/jquery/jquery-1.11.2.min.js", "async" : false},
+		{"src" : "libs/bootstrap/js/bootstrap.min.js", "async" : false},
+		{"src" : "libs/plugins-scroll/plugins-scroll.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+
+</body>
 </html>
