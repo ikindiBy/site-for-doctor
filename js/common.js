@@ -52,3 +52,18 @@ $(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
+
+
+$(document).ready(function(){
+	$("submission_form").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function(){
+			alert("go-go-go");
+		});
+		return false;
+	});
+
+});
