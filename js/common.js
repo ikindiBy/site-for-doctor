@@ -23,7 +23,7 @@ $(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
+	$("#submission_form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -55,7 +55,7 @@ $(function() {
 
 
 $(document).ready(function(){
-	$("submission_form").submit(function() {
+	$("#submission_form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
